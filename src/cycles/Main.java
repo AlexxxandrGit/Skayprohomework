@@ -2,7 +2,9 @@ package cycles;
 
 public class Main {
 
-    public static void main(String[] args) {task9();}
+    public static void main(String[] args) {task11();}
+
+    // Циклы. Урок 1.
 
     public static void task1() {
         for (int i = 0; i <= 10; i++) {
@@ -68,9 +70,9 @@ public class Main {
     }
 
     public static void task9() {
-        int contribution = 29000;
+        int contribution = 65535;
         int accumulation = 0;
-        for (int i = 1; i <=12; i++) {
+        for (int i = 1; i <=12; i++ ) {
             accumulation = accumulation + contribution;
             accumulation = accumulation + accumulation/100;
             System.out.println(" Месяц " + i + " сумма накоплений равна " + accumulation + " руб.");
@@ -78,6 +80,53 @@ public class Main {
         }
 
 
+    }
+
+    // Циклы. Урок 2.
+    // Домашнее задание -1
+    // Задание 1
+
+    public static void task10() {
+        System.out.println("Домашнее задание - 1");
+        System.out.println(" Задание 1");
+        System.out.println();
+        int contribution = 15000;
+        int accumulation = 0;
+        int month  = 0;
+        while (accumulation < 2_459_000) {
+            accumulation = accumulation + accumulation / 100;
+            accumulation = accumulation + contribution;
+            month++;
+
+            System.out.println("Месяц " + month + " сумма накоплений равна " + accumulation + " рублей");
+
+        }
+
+    }
+
+    // Домашнее задание -1
+    // Задание 2
+    public static void task11() {
+        System.out.println("Домашнее задание - 1");
+        System.out.println(" Задание 2");
+        System.out.println();
+
+        int a = 0;
+
+        while (a < 10) {
+            a++;
+            System.out.print(" " + a);
+
+        }
+        System.out.println();
+        int b = 10;
+        for (b=10; b>0; b--){
+            System.out.print(" " + b);
+        }
+
+
+
+    }
 
 
 
@@ -85,7 +134,8 @@ public class Main {
     }
 
 
-}
+
+
 
 
 
