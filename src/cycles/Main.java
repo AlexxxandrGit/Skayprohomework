@@ -3,7 +3,7 @@ package cycles;
 public class Main {
 
     public static void main(String[] args) {
-        task1();
+        task3();
     }
 
 
@@ -57,13 +57,11 @@ public class Main {
         int population = 12_000_000;
         int birthRatePerYearPer1000People = 17;
         int deathRatePerYearPer1000People = 8;
-        int totalFertility = birthRatePerYearPer1000People * population / 1000;
-        int totalMortality = deathRatePerYearPer1000People * population / 1000;
+        int populationIncreasePerYear = (birthRatePerYearPer1000People - deathRatePerYearPer1000People) * (population / 1000);
+        for (int year = 0; year <= 10; year++) {
+            population = population + populationIncreasePerYear;
 
-        for (int i = 1; i <= 10; i++) {
-            population += totalFertility;
-            population -= totalMortality;
-            System.out.printf("Год %d , численность населения составляет %d \n", i, population);
+            System.out.printf("Год %d , численность населения составляет %d \n", year, population);
 
         }
 
@@ -144,16 +142,15 @@ public class Main {
     // Задача 1
 
     public static void task8() {
-        int totalYearComet = 0;
-        int twoHundredYearsBeforeTheCurrentYear = 2022 - 200;
-        int oneHundredYearsBeforeThisYear = 2022 + 100;
-        while (totalYearComet <= oneHundredYearsBeforeThisYear) {
-            totalYearComet = totalYearComet + 79;
-            if (totalYearComet >= twoHundredYearsBeforeTheCurrentYear && totalYearComet <= oneHundredYearsBeforeThisYear) {
-
-                System.out.println(totalYearComet);
+        int presentTime = 2022;
+        int twoHundredYearsBeforeTheCurrentYear = presentTime - 200;
+        int oneHundredYearsBeforeThisYear = presentTime + 100;
+        for (int i = twoHundredYearsBeforeTheCurrentYear; i < oneHundredYearsBeforeThisYear; i++) {
+            if (i % 79 == 0) {
+                System.out.println(i);
 
             }
+
 
         }
 
