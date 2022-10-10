@@ -57,8 +57,8 @@ public class Main {
         int population = 12_000_000;
         int birthRatePerYearPer1000People = 17;
         int deathRatePerYearPer1000People = 8;
-        int populationIncreasePerYear = (birthRatePerYearPer1000People - deathRatePerYearPer1000People) * (population / 1000);
         for (int year = 0; year <= 10; year++) {
+            int populationIncreasePerYear = (birthRatePerYearPer1000People - deathRatePerYearPer1000People) * (population / 1000);
             population = population + populationIncreasePerYear;
 
             System.out.printf("Год %d , численность населения составляет %d \n", year, population);
